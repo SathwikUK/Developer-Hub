@@ -62,7 +62,8 @@ app.post('/login', async (req,res)=>{
         }
         let payload = {
             user:{
-                id:exist.id
+                id:exist.id,
+                fullname:exist.fullname
             }
         }
         jwt.sign(payload,'jwtPassword',{expiresIn:360000000},(err,token)=>{
@@ -127,7 +128,7 @@ app.post('/addreview',middleware,async(req,res)=>{
 app.get('/myreview',middleware,async(req,res)=>{
     try{
         let allreviews= await review.find()
-        let myreviews=allreviews.filter(review => review.taskworker === req.user.id.toString())
+        let myreviews=allreviews.filter(review => review.taskworker === req.user.fullname.toString())
         return res.status(200).json(myreviews)
 
 
