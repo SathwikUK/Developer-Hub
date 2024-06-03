@@ -4,11 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
+    "start": "nodemon server"
     
-    "server":"nodemon both",
-    "client":"npm start --prefix client",
-    "both":"concurrently \"npm run server\" \"npm run client\" "
+    
   },
   "author": "",
   "license": "ISC",
