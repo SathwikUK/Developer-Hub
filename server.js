@@ -15,12 +15,14 @@ mongoose.connect(dbURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
-    console.log('Database connection successful');
+    console.log('\nDatabase connection successful');
 }).catch((err) => {
     console.error('Database connection error:', err.message);
 });
 app.use(express.json());
-app.use(cors({origin:"*"}))
+app.use(cors(
+    
+    {origin:"*"}))
 
 app.get('/', (req, res) => {
     return res.send('Hello world!');
