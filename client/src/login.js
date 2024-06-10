@@ -18,7 +18,7 @@ const Login = () => {
     const submitHandler = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5000/login', data);
+            const res = await axios.post('https://developer-hub-tmuy.vercel.app/login', data);
             localStorage.setItem('token',res.data.token)
             // Assuming a successful login redirects to the dashboard or homepage
             navigate('/dashboard');

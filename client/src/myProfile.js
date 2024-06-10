@@ -14,7 +14,7 @@ const MyProfile = () => {
     if (!localStorage.getItem('token')) {
       navigate('/login');
     } else {
-      axios.get('http://localhost:5000/myprofile', {
+      axios.get('https://developer-hub-tmuy.vercel.app/myprofile', {
         headers: {
           "x-token": localStorage.getItem('token')
         }

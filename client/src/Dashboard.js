@@ -12,7 +12,7 @@ const Dashboard = () => {
     if (!localStorage.getItem('token')) {
       navigate('/login');
     } else {
-      axios.get('http://localhost:5000/allprofiles', {
+      axios.get('https://developer-hub-tmuy.vercel.app/allprofiles', {
         headers: {
           "x-token": localStorage.getItem('token')
         }

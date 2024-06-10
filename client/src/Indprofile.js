@@ -9,7 +9,7 @@ const Indprofile = () => {
   const [taskprovider, setTaskprovider] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/myprofile', {
+    axios.get('https://developer-hub-tmuy.vercel.app/myprofile', {
       headers: {
         "x-token": localStorage.getItem('token')
       }
@@ -27,7 +27,7 @@ const Indprofile = () => {
       rating
     };
 
-    axios.post('http://localhost:5000/addreview', review, {
+    axios.post('https://developer-hub-tmuy.vercel.app/addreview', review, {
       headers: {
         "x-token": localStorage.getItem('token')
       }
