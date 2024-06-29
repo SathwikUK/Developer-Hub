@@ -25,7 +25,7 @@ const MyProfile = () => {
     
         .catch(error => console.error("Error fetching profile:", error));
 
-      axios.get('http://localhost:5000/myreview', {
+      axios.get('https://developer-hub-tmuy.vercel.app/myreview', {
         headers: {
           "x-token": localStorage.getItem('token')
         }
@@ -82,22 +82,6 @@ const MyProfile = () => {
 }
 
 
-              <div className='repo bg-white p-1 my-1'>
-                <div>
-                  <h4>Enter Your Reviews</h4>
-                  <form className='form' autoComplete='off' onSubmit={handleReviewSubmit}>
-                    <div className='form-group'>
-                      <input
-                        type="text"
-                        placeholder='Enter your rating out of 5'
-                        name="rating"
-                        required
-                      />
-                    </div>
-                    <input type="submit" className='btn btn-primary' value="Add Rating" />
-                  </form>
-                </div>
-              </div>
             </div>
           </div>
         )}

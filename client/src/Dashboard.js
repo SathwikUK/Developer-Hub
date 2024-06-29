@@ -54,8 +54,9 @@ const Dashboard = () => {
                 </div>
                 <ul>
                   {profile.skill.split(",").map(skill => 
-                    <li className='text-primary'>
+                    <li className='skill-text'>
                       <i className='fas fa-check'></i> {skill}
+                    
                     </li>
                   )}
                 </ul>
