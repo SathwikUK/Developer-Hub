@@ -29,7 +29,7 @@ const Dashboard = () => {
         </h1>
         <ul>
           <li><Link to="/myprofile">My Profile</Link></li>
-          <li><Link to="/login" onClick={() => localStorage.removeItem('token')}>Logout</Link></li>
+          <li><Link to="/" onClick={() => localStorage.removeItem('token')}>Logout</Link></li>
         </ul>
       </nav>
       <section className='container'>
